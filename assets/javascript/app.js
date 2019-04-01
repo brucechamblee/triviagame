@@ -1,10 +1,12 @@
 $("#start").click(function(){
     game.start();
-
+    
 })
 
 $(document).on('click','#end',function(){
     game.done();
+    $('#end').click(e => jeopardySound.stop());
+    jeopardySound.currentTime = 0;
     
     
 })
@@ -23,7 +25,7 @@ var questions = [{
     answers: ["Fruit Smack", "Oh Yeah Punch", "Kool Fuel", "Happy Juice"],
     correctAnswer: "Fruit Smack"
 },{
-    question: "How many words different words are in the Dr. Seuss Book 'Green Eggs and Ham'?",
+    question: "How many different words are in the Dr. Seuss Book 'Green Eggs and Ham'?",
     answers: ["100", "75", "50", "60"],
     correctAnswer: "50"
 },{
@@ -42,7 +44,6 @@ var questions = [{
 
 var jeopardySound = new Audio('assets/images/Jeopardy-theme-song.mp3');
 $('#start').click(e => jeopardySound.play());
-
 
 var game = {
     correct: 0,
