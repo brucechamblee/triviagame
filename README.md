@@ -1,4 +1,7 @@
 # triviagame
+
+[Random Trivia Game] (https://brucechamblee.github.io/triviagame/)
+
 This was my first Javascript Project where I had to build something that was interactive and dynamic with a timer. I decided to go with a random trivia theme with a space background. 
 
 ### Getting Started
